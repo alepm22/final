@@ -1,0 +1,18 @@
+spring:
+  application.name: configuration-server
+  main:
+    banner-mode: off
+  cloud:
+    config:
+      enabled: true
+      server:
+        git:
+          defaultLabel: main
+          uri: https://github.com/jhonata-diaz/configServer
+server:
+  port: 8888
+logging:
+  level:
+    org.springframework.cloud.config: DEBUG
+    org.springframework.web: DEBUG
+

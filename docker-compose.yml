@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  configserver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: configserver:latest
+    ports:
+      - "8888:8888"
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
